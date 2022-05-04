@@ -16,7 +16,7 @@ public class thehuxley_407_3nAdd1 {
             }
             cycleSize++;
         }
-        System.out.print(n1+" "+n2+" "+cycleSize);
+        System.out.printf("%f %f %f",n1,n2,cycleSize);
         sc.close();
     }     
 }
