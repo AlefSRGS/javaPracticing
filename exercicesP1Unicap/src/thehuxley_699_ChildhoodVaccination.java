@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class thehuxley_699_ChildhoodVaccination {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
@@ -14,7 +13,6 @@ public class thehuxley_699_ChildhoodVaccination {
                 System.out.print(finalYear+" ");
             }
         }
-        
         sc.close();
     }
 }
