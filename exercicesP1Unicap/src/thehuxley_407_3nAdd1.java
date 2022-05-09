@@ -3,7 +3,7 @@ public class thehuxley_407_3nAdd1 {
     public static void main(String[] args) throws Exception {
         //imcompleta
         Scanner sc = new Scanner(System.in);
-        int n1=0; int n2=0; int cycleSize = 1; int maxCycleSize=0;
+        int n1=0; int n2=0; int maxCycleSize=0;
         if(n2<n1){
             int temp = n1;
             n2 = n1;
