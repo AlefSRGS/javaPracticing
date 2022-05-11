@@ -14,8 +14,8 @@ public class thehuxley_699_ChildhoodVaccination {
                 firstYear+=periodicity;
                 nextVaccines.add(firstYear);
             }
+            System.out.printf("%d %d %d\n",nextVaccines.get(0),nextVaccines.get(1),nextVaccines.get(2));
         }
-        System.out.printf("%d %d %d\n",nextVaccines.get(0),nextVaccines.get(1),nextVaccines.get(2));
         sc.close();
     }
 }
