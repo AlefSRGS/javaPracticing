@@ -1,6 +1,6 @@
-import Java.Util.Scanner;
+import java.util.Scanner;
 public class calculatorRaizQuadrada{
-  public static void main(final String[] args) {
+  public static void main(final String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		double s = sc.nextDouble();
 		double sqrt = sqrt(s);
