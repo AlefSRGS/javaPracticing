@@ -6,7 +6,7 @@ public class beecrowd_1009_SalaryWithBonus {
 		double fixedSalary = sc.nextDouble();
 		double saleTotal = sc.nextDouble();
 		double bonus = (saleTotal/100)*15;
-		System.out.printf("%s TOTAL = R$ %.2f",sellerName, fixedSalary+bonus);
+		System.out.printf("TOTAL = R$ %.2f\n" fixedSalary+bonus);
 		sc.close();
     }
 }
