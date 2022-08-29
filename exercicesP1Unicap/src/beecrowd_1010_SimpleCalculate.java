@@ -14,5 +14,6 @@ public class beecrowd_1010_SimpleCalculate {
             System.out.printf("VALOR A PAGAR: R$ %.2f\n",totalValue);
         }
         }
+        sc.close();
 }
 }
