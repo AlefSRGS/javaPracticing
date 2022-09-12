@@ -18,25 +18,25 @@ public class question2 {
         }
         return test;
     }
-    public static void FormatB(double[] arrayA) {
+    public static void formatB(int[] arrayA, int[] arrayB) {
         for(int i = 0; i < arrayA.length;i++){
             if(testPar(i)==true){
-                arrayA[i] /= 2; 
+                arrayB[i] = arrayA[i] / 2; 
             }else{
-                arrayA[i] *=3;
+                arrayB[i] = arrayA[i] * 3;
             }
         }
     }
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
-        while(sc.hasNext()){
-            double[] listnum;
-            listnum = new double[15];
-            for(int i; i < listnum.length; i++){
-
-            }
-
+        int[] listnum = new int[15];
+        int[] listnum2 = new int[15];
+        for(int i = 0; i < listnum.length; i++){
+            listnum[i] = sc.nextInt();
         }
+        formatB(listnum[], listnum2[]);
+        System.out.println(listnum[]);
+        System.out.println(listnum2[]);
         sc.close();
     }
 }
