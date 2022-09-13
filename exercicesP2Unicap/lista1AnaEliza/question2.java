@@ -8,6 +8,7 @@ package exercicesP2Unicap.lista1AnaEliza;
 //Se o valor de A[3] for 10, então B[3] receberá o valor 30. 
 //Se o valor de A[8] for 40, então B[8] receberá o valor 20. 
 import java.util.Scanner;
+//função para testar se os numeros sao pares 
 public class question2 {
     public static boolean testPar(double num1){
         boolean test;
@@ -18,6 +19,7 @@ public class question2 {
         }
         return test;
     }
+//função de preenchimentos do vetor B apartir do vetor A
     public static void formatB(int[] arrayA, int[] arrayB) {
         for(int i = 0; i < arrayA.length;i++){
             if(testPar(i)==true){
@@ -31,12 +33,13 @@ public class question2 {
         Scanner sc = new Scanner(System.in);
         int[] listnum = new int[15];
         int[] listnum2 = new int[15];
+        //preenchendo o vetor A 
         for(int i = 0; i < listnum.length; i++){
             listnum[i] = sc.nextInt();
         }
-        formatB(listnum[], listnum2[]);
-        System.out.println(listnum[]);
-        System.out.println(listnum2[]);
+        formatB(listnum, listnum2);
+        System.out.println(listnum);
+        System.out.println(listnum2);
         sc.close();
     }
 }
