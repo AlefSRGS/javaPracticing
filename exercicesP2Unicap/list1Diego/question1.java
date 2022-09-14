@@ -9,8 +9,11 @@ public class question1 {
         }
     }
     public static void main(String[] args) throws Exception{
+        //tests for methods above
         double n = 15;
         double result = SumDivision.Sum(n, 0);
+        System.out.println(result);
         double result2 = SumDivision.divide(n, 1);
+        System.out.println(result2);
     }
 }
