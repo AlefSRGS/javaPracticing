@@ -27,14 +27,15 @@ public class questionsList2 {
         //uncomplete method 
         static boolean isPalindrome(int[] aSequence){
             boolean testPalindrome = true;
-                for(int i =0;i<aSequence.length/2;i++){
-                    if(aSequence[i] != aSequence[aSequence.length-i]){
+                for(int i =0;i<(aSequence.length/2);i++){
+                    if(aSequence[i] != aSequence[aSequence.length-i-1]){
                         testPalindrome = false;
                     }
                 }
             return testPalindrome;
         }
     public static void main(String[] args)throws Exception{
+        //testing methods
         Scanner sc = new Scanner(System.in);
         int[] listnum1 = new int[4];
         for(int i = 0; i < listnum1.length; i++){
