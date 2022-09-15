@@ -8,32 +8,31 @@ public class question4 {
         }
         return medias;
     }
-    static boolean[] testAprov(double[] listMedias){
-        boolean[] listTest = new boolean[20];
-        for(int i =0;i<listMedias.length;i++){
-            if(listMedias[i]>=7){
-                listTest[i]=true;
-            }else{
-                listTest[i]=false;
-            }
-        }
-        return listTest;
-    }
-    static String[] makeListAproveOrNot(String[] listNames, double[] list1, double[] list2){
+    static void testAprov(String[] listNames, double[] list1, double[] list2){
         double[] listMedias = calculatorMediaNotas(list1, list2);
-        boolean[] listTest = testAprov(listMedias);
-        String[] listAprov; String[] listReporv;
-        for(int i = 0; i<listMedias.length;i++){
-            if(listTest[i] == true){
-                listAprov[i] = lis
+        String[] listAprov = new String[20]; String[] listReprov = new String[20];
+        for(int i =0;i<listMedias.length;i++){
+            for(int aux = 0;aux <listMedias.length;aux++){
+                if(listMedias[i]>=7){
+                listAprov[aux] = listNames[i];
+            }
+            for(int aux2 = 0;aux2 <listMedias.length;aux2++){
+                if(listMedias[i]<7){
+                listReprov[aux2] = listNames[i];
+                }
+            }
             }
         }
+        System.out.println(listAprov);
+        System.out.println(listReprov);
     }
+        
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
         String[] nomeAlunos = new String[20];
         double[] primeirasNotas = new double[20];
         double[] segundasNotas = new double[20];
+        testAprov(nomeAlunos, primeirasNotas, segundasNotas);
         sc.close();
     }
 }
