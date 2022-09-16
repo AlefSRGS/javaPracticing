@@ -10,7 +10,15 @@ public class question4 {
     }
     static void testAprov(String[] listNames, double[] list1, double[] list2){
         double[] listMedias = calculatorMediaNotas(list1, list2);
-        String[] listAprov = new String[20]; String[] listReprov = new String[20];
+        int qntAprov = 0; int qntReprov = 0;
+        for(int j = 0;j<listMedias.length;j++){
+            if(listMedias[j]>=7){
+                qntAprov++;
+            }else{
+                qntReprov++;
+            }
+        }
+        String[] listAprov = new String[qntAprov]; String[] listReprov = new String[qntReprov];
         for(int i =0;i<listMedias.length;i++){
             for(int aux = 0;aux <listMedias.length;aux++){
                 if(listMedias[i]>=7){
@@ -32,6 +40,11 @@ public class question4 {
         String[] nomeAlunos = new String[20];
         double[] primeirasNotas = new double[20];
         double[] segundasNotas = new double[20];
+        for(int i = 0; i<nomeAlunos.length;i++){
+            nomeAlunos[i] = sc.nextLine();
+            primeirasNotas[i] = sc.nextDouble();
+            segundasNotas[i] = sc.nextDouble();
+        }
         testAprov(nomeAlunos, primeirasNotas, segundasNotas);
         sc.close();
     }
