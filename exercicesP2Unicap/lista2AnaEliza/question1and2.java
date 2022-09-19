@@ -30,6 +30,22 @@ public class question1and2 {
     }
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
+
+        double[] vetorGanhos = new double[12];
+        vetorGanhos = preencherVetor(vetorGanhos);
+        double[] vetorGastos = new double[12];
+        vetorGastos = preencherVetor(vetorGastos);
+
+        double[] vetorLucros = new double[12];
+        vetorLucros = getLucros(vetorGanhos, vetorGastos);
+
+        vetExibir(vetorGanhos);
+        vetExibir(vetorGastos);
+        vetExibir(vetorLucros);
+
+        System.out.println(sumVetor(vetorGanhos));
+        System.out.println(sumVetor(vetorGastos));
+        System.out.println(sumVetor(vetorLucros));
         sc.close();
     }
 }
