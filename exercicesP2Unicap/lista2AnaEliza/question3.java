@@ -44,6 +44,17 @@ public class question3 {
             System.out.printf("O aluno %s obteve média %f e está %s", vetorNomes, vetorMedias, vetorSituação);
         }
     }
+    static double calculatorAverageClass(double[] vetorMedias){
+        double averageClass = 0;
+        for(int i =0; i<vetorMedias.length;i++){
+            averageClass += vetorMedias[i];
+        }
+        averageClass /= vetorMedias.length;
+        return averageClass;
+    }
+    static void percentAverage(double[] vetorMedias, double mediaTurma){
+        
+    }
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
         String[] listNames =  new String[50];
@@ -52,6 +63,7 @@ public class question3 {
         double[] listAverage =  new double[50];
         String[] listSituacion =  new String[50];
         preencherVetores(listNames, listFirstGrade, listSecondGrade, listAverage, listSituacion);
+        double averageClass = calculatorAverageClass(listAverage);
         exibirResult(listNames, listAverage, listSituacion);
         sc.close(); 
     }
