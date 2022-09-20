@@ -46,7 +46,7 @@ public class question3a6 {
     }
     static double calculatorAverageClass(double[] vetorMedias){
         double averageClass = 0;
-        for(int i =0; i<vetorMedias.length;i++){
+        for(int i =0; i<vetorMedias.length-1;i++){
             averageClass += vetorMedias[i];
         }
         averageClass /= vetorMedias.length;
@@ -59,8 +59,8 @@ public class question3a6 {
                 qntMediasBaixas++;
             }
         }
-        double percentMedias = (qntMediasBaixas/100)*vetorMedias.length;
-        return percentMedias; 
+        double percentMediasBaixas = (qntMediasBaixas/100)*vetorMedias.length;
+        return percentMediasBaixas; 
     }
     static double biggerAverage(double[] vetorMedias){
         double maiorMedia =0;
@@ -77,8 +77,13 @@ public class question3a6 {
         double[] listAverage =  new double[50];
         String[] listSituacion =  new String[50];
         preencherVetores(listNames, listFirstGrade, listSecondGrade, listAverage, listSituacion);
-        double averageClass = calculatorAverageClass(listAverage);
         exibirResult(listNames, listAverage, listSituacion);
+        double averageClass = calculatorAverageClass(listAverage);
+        double mediasBaixas = percentAverage(listAverage, averageClass);
+        double maiorMedia = biggerAverage(listAverage);
+        System.out.printf("a media da turma é %f",averageClass);
+        System.out.printf("o percentual de pessoas com media baixa é %f"+"%",mediasBaixas);
+        System.out.printf("a maior media da turma é %f",maiorMedia);
         sc.close(); 
     }
 }
