@@ -1,6 +1,6 @@
 package exercicesP2Unicap.lista2AnaEliza;
 import java.util.Scanner;
-public class question3 {
+public class question3a6 {
     static double[] calculatorMedia(double[] firstGrade, double[] secondGrade){
         double[] vetorMedias = new double[firstGrade.length];
         for(int i=0;i<vetorMedias.length-1;i++){
@@ -52,8 +52,22 @@ public class question3 {
         averageClass /= vetorMedias.length;
         return averageClass;
     }
-    static void percentAverage(double[] vetorMedias, double mediaTurma){
-        
+    static double percentAverage(double[] vetorMedias, double mediaTurma){
+        int qntMediasBaixas = 0;
+        for(int i =0;i<vetorMedias.length-1;i++){
+            if(vetorMedias[i]<mediaTurma){
+                qntMediasBaixas++;
+            }
+        }
+        double percentMedias = (qntMediasBaixas/100)*vetorMedias.length;
+        return percentMedias; 
+    }
+    static double biggerAverage(double[] vetorMedias){
+        double maiorMedia =0;
+        for(int i = 0; i<vetorMedias.length-2;i++){
+            maiorMedia = vetorMedias[i]+vetorMedias[i+1]+Math.abs(vetorMedias[i]-vetorMedias[i+1]); 
+        }
+        return maiorMedia;
     }
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
