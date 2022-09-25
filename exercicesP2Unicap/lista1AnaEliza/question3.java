@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista1AnaEliza;
+package lista1AnaEliza;
 import java.util.Scanner;
 public class question3 {
     public static void addVetores(double[] vetorA, double[] vetorB, double[] vetorC){

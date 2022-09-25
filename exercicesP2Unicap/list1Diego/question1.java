@@ -1,4 +1,4 @@
-package exercicesP2Unicap.list1Diego;
+package list1Diego;
 public class question1 {
     public class SumDivision {
         static double Sum(double addend1, double addend2){

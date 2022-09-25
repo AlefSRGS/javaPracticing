@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista2AnaEliza;
+package lista2AnaEliza;
 import java.util.Scanner;
 public class question3a6 {
     static double[] calculatorMedia(double[] firstGrade, double[] secondGrade){

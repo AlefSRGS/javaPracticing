@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista1AnaEliza;
+package lista1AnaEliza;
 import java.util.Scanner;
 public class question4 {
     static double[] calculatorMediaNotas(double[] list1, double[] list2){

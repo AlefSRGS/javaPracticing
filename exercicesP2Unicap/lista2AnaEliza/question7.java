@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista2AnaEliza;
+package lista2AnaEliza;
 import java.util.Scanner;
 public class question7 {
     static void preencherVotes(int[] vetorVotes){

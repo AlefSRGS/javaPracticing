@@ -1,4 +1,4 @@
-package exercicesP2Unicap.list1Diego;
+package list1Diego;
 public class question2 {
     class Volume {
             static String getName(int volume){

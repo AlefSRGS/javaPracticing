@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista2AnaEliza;
+package lista2AnaEliza;
 import java.util.Scanner;
 public class question1and2 {
     static double[] preencherVetor(double[] vetor){

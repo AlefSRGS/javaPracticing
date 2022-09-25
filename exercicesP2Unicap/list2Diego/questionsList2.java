@@ -1,4 +1,4 @@
-package exercicesP2Unicap.list2Diego;
+package list2Diego;
 import java.util.Scanner;
 public class questionsList2 {
     class Utils{

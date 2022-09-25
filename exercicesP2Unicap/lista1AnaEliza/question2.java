@@ -1,4 +1,4 @@
-package exercicesP2Unicap.lista1AnaEliza;
+package lista1AnaEliza;
 //2ª Questão: Implemente um programa para criar dois vetores de 15 números inteiros cada um, A e B. 
 //O  programa deve preencher o vetor A com valores digitados pelo usuário. O vetor B deve ser preenchido 
 //da  seguinte forma: os elementos de índice par são os correspondentes de A divididos por 2 e os elementos 
