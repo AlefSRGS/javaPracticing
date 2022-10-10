@@ -1,44 +1,37 @@
 import java.util.Scanner;
 public class thehuxley_407_3nAdd1 {
     public static void main(String[] args) throws Exception {
-        //imcompleta
         Scanner sc = new Scanner(System.in);
-        int n1=0; int n2=0; int maxCycleSize=0;
-        if(n2<n1){
-            int temp = n1;
-            n2 = n1;
-            n1 = temp;
-        }
-        while(sc.hasNextInt()){
-            n1 = sc.nextInt();
-            n2 = sc.nextInt();
-            maxCycleSize = maxCycleSize(n1, n2);
-        }
-        System.out.printf("%d %d %d",n1,n2,maxCycleSize);
-        sc.close();
-    }
-    public static int cycleSize(int n1) {
-        int cycleSize = 1;
-        int temp = n1;
-        while(temp != n1){
-            cycleSize++;
-            if(temp %2==0){
-                temp /= 2;
-            }else{
-                temp= temp*3 +1;
-            }
-        }
-        return cycleSize;
-    }
-    public static int maxCycleSize(int n1,int n2) {
-        int maxCyclesize = 1;
-        for(int i =n1;i<n2;i++){
-            int cycleSize = cycleSize(n1);
-            if(cycleSize>maxCyclesize){
-                maxCyclesize = cycleSize;
-            }
-        }
-        return maxCyclesize;
+		while(sc.hasNext()){
+			int i = sc.nextInt();
+			int j = sc.nextInt();
+			if(i>j){
+				int aux = i;
+				i = j;
+				j = aux;
+			}
+			int maxCycleSize = 0;
+			int k = i;
+			while(i<=j){
+				int cycleSize = 1;
+				int n = i;
+				while(n != 1){
+					if(n%2==0){
+						n/=2;
+						cycleSize++;
+					}else if(n%2!=0){
+						n = n*3+1;
+						cycleSize++;
+					}
+				}
+				if(cycleSize> maxCycleSize){
+					maxCycleSize = cycleSize;
+				}
+				i++;
+			}
+			System.out.printf("%d %d %d\n",k,j,maxCycleSize);
+		}
+		sc.close();
     }   
 }
 
