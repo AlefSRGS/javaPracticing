@@ -1,7 +1,7 @@
 package list2Diego;
 import java.util.Scanner;
 public class questionsList2 {
-    class Utils{
+    static class Utils{
         static int[] buildVectorRepeat(int repetitions, int value){
             int[] vetor = new int[repetitions];
             for(int i = 0; i<repetitions;i++){
@@ -23,17 +23,17 @@ public class questionsList2 {
                 escalarProductAB += a[i] * b[i];
             }
             return escalarProductAB;
-        }
-        //uncomplete method 
+        } 
         static boolean isPalindrome(int[] aSequence){
             boolean testPalindrome = true;
-                for(int i =0;i<(aSequence.length/2);i++){
+                for(int i =0;i<((aSequence.length/2)-1);i++){
                     if(aSequence[i] != aSequence[aSequence.length-i-1]){
                         testPalindrome = false;
                     }
                 }
             return testPalindrome;
         }
+    }
     public static void main(String[] args)throws Exception{
         //testing methods
         Scanner sc = new Scanner(System.in);
@@ -44,5 +44,4 @@ public class questionsList2 {
         System.out.println(Utils.isPalindrome(listnum1));
         sc.close();
     }
-}
 }
