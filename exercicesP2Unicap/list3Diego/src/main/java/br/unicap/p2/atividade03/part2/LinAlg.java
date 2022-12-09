@@ -19,6 +19,21 @@ public class LinAlg {
         }
         return transposeA;
     }
+    static double[][] matrixMultiplication(double[][] A, double[][] B){
+        
+        double[][] C = new double[A[0].length][A.length];
+        int columnA =0; int lineB =0;
+        for(int lineC=0; lineC<A[0].length;lineC++){
+            for(int columnC =0;columnC<A.length;columnC++){
+                while(lineB < B[0].length && columnA < A.length){
+                    C[lineC][columnC] += A[lineC][columnA]*B[lineB][columnC];
+                    columnA++;
+                    lineB++;
+                }
+            }
+        }
+        return C;
+    }
 }
     
     
