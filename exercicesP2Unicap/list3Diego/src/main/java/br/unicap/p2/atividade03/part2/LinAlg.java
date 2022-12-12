@@ -12,8 +12,8 @@ public class LinAlg {
 
     static double[][] matrixTranspose(double[][] A){
         double[][] transposeA = new double[A[0].length][A.length];
-        for(int i =0;i<2;i++){
-            for(int aux =0;aux<2;aux++){
+        for(int i =0;i<A[0].length;i++){
+            for(int aux =0;aux<A.length;aux++){
                 transposeA[aux][i] = A[i][aux];
             } 
         }
@@ -22,15 +22,13 @@ public class LinAlg {
     static double[][] matrixMultiplication(double[][] A, double[][] B){
         
         double[][] C = new double[A[0].length][A.length];
-        int columnA =0; int lineB =0;
         for(int lineC=0; lineC<A[0].length;lineC++){
             for(int columnC =0;columnC<A.length;columnC++){
-                while(lineB < B[0].length && columnA < A.length){
-                    C[lineC][columnC] += A[lineC][columnA]*B[lineB][columnC];
-                    columnA++;
-                    lineB++;
-                }
+                C[lineC][columnC] = A[lineC][columnC] * B[lineC][columnC];
             }
+        }
+        if(A[0].length != B[0].length && A.length != B.length){
+            System.out.print("Número de colunas de A diferente do numéro de linhas de B mas retornou ");
         }
         return C;
     }
