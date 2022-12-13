@@ -50,6 +50,17 @@ public class LinAlg {
         }
         return S;
     }
+    public static double matrixDeterminant(double[][] A) {
+        double somDiagonalPrim = 1;
+        double somDiagonalSec = 1;
+        for(int lineA=0,columnA=0;lineA<A.length;lineA++,columnA++){
+            somDiagonalPrim *= A[columnA][lineA];
+        }for(int lineA=0,columnA =A[0].length-1;lineA<A.length;lineA++,columnA--){
+            somDiagonalSec *= A[columnA][lineA];
+        }
+        double determinantA = somDiagonalPrim +  somDiagonalSec;
+        return determinantA;
+    }
 }
     
     
