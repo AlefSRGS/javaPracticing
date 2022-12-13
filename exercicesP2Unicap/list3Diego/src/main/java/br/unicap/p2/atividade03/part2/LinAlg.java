@@ -34,18 +34,19 @@ public class LinAlg {
     }
     static double[][] subMatrix(double[][]A, int i, int j){
         double[][] S = new double[A[0].length-1][A.length-1];
-        for(int lineA =0;lineA<A[0].length;lineA++){
+        for(int lineA =0,lineS=0;lineA<A[0].length;lineA++){
             if(lineA == i){
                 lineA++;
-            }else{
-                for(int columnA =0;columnA<A.length;columnA++){
-                    if(columnA == j){
-                        columnA++;
-                    }else{
-                        S[][] = A[lineA][columnA];
-                    }
-                } 
             }
+            for(int columnA =0,columnS=0;columnA<A.length && lineA<A[0].length;columnA++){
+                if(columnA == j){
+                    columnA++;
+                }else{
+                    S[lineS][columnS] = A[lineA][columnA];
+                    columnS++;
+                }
+            }
+            lineS++;
         }
         return S;
     }
