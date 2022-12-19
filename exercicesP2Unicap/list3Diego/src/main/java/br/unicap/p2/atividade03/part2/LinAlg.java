@@ -58,7 +58,7 @@ public class LinAlg {
         }for(int lineA=0,columnA =A[0].length-1;lineA<A.length;lineA++,columnA--){
             somDiagonalSec *= A[columnA][lineA];
         }
-        double determinantA = somDiagonalPrim +  somDiagonalSec;
+        double determinantA = somDiagonalPrim -  somDiagonalSec;
         return determinantA;
     }
 }
