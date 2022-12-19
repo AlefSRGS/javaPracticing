@@ -52,21 +52,32 @@ public class LinAlg {
         }
         return S;
     }
-    public static double matrixDeterminant(double[][] A) {
-        double somDiagonalPrim = 1;
-        double somDiagonalSec = 1;
-        for(int lineA=0,columnA=0;lineA<A.length;lineA++,columnA++){
-            somDiagonalPrim *= A[columnA][lineA];
-        }for(int lineA=0,columnA =A[0].length-1;lineA<A.length;lineA++,columnA--){
-            somDiagonalSec *= A[columnA][lineA];
+    public static double matrixDeterminant(double[][] A){
+        if(A.length<=2){
+            double somDiagonalPrim = 1;
+            double somDiagonalSec = 1;
+            for(int lineA=0,columnA=0;lineA<A.length;lineA++,columnA++){
+                somDiagonalPrim *= A[columnA][lineA];
+            }for(int lineA=0,columnA =A[0].length-1;lineA<A.length;lineA++,columnA--){
+                somDiagonalSec *= A[columnA][lineA];
+            }
+            double determinantA = somDiagonalPrim -  somDiagonalSec;
+            return determinantA;
+        }else{
+            int line =0;
+            double determinantA = 0;
+            for(int column =0;column<A[0].length;column++){
+                determinantA += A[line][column] * matrixCoFactor(A, line, column);
+            }
+            return determinantA;
         }
-        double determinantA = somDiagonalPrim -  somDiagonalSec;
-        return determinantA;
+        
     }
     public static double matrixCoFactor(double[][] A, int i, int j){
         double cofatorA = Math.pow(-1, i+j) * matrixDeterminant(subMatrix(A, i, j));
         return cofatorA;
     }
+
 }
     
     
