@@ -1,5 +1,7 @@
 package br.unicap.p2.atividade03.part2;
 
+import javafx.css.Match;
+
 public class LinAlg {
     static double[][] matrixMultiplication(double a, double[][] A){
         for(int i =0;i<2;i++){
@@ -60,6 +62,10 @@ public class LinAlg {
         }
         double determinantA = somDiagonalPrim -  somDiagonalSec;
         return determinantA;
+    }
+    public static double matrixCoFactor(double[][] A, int i, int j){
+        double cofatorA = Math.pow(-1, i+j) * matrixDeterminant(subMatrix(A, i, j));
+        return cofatorA;
     }
 }
     
