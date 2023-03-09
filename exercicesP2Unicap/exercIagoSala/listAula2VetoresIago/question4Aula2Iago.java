@@ -8,5 +8,6 @@ public class question4Aula2Iago {
     public static void main(String[] args) {
         double[] array10elementosReais = new double[10];
         question1Aula2Iago.readArrayDouble(array10elementosReais);
+        printEvenIndex(array10elementosReais);
     }
 }
