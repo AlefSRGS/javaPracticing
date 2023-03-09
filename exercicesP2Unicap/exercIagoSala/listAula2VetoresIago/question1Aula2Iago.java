@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class question1Aula2Iago{
-    static void readArray(double[] array){
+    static void readArrayDouble(double[] array){
         Scanner sc = new Scanner(System.in);
         for(int i=0;i<array.length;i++){
             array[i] = sc.nextDouble();
@@ -24,7 +24,7 @@ public class question1Aula2Iago{
     }
     public static void main(String[] args) {
         double[] listNum10 = new double[10];
-        readArray(listNum10);
+        readArrayDouble(listNum10);
         getHigherNumAndIndex(listNum10);
     }
 }
