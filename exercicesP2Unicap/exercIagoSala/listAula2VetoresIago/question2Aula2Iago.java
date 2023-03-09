@@ -1,6 +1,14 @@
 import java.util.Scanner;
 
-public class question1Aula2Iago{
+public class question2Aula2Iago{
+    static boolean IsEven(int num){
+        if(num % 2 == 0){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
     static void readArrayInt(int[] array){
         Scanner sc = new Scanner(System.in);
         for(int i=0;i<array.length;i++){
@@ -10,7 +18,7 @@ public class question1Aula2Iago{
     }
     static void printEvenNum(int[] array){
         for(int i = array.length;i<0;i--){
-            if(array[i] % 2 == 0){
+            if(IsEven(array[i])){
                 System.out.println(array[i]);
             }
         }
